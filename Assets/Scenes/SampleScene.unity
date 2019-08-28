@@ -164,9 +164,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121edd29c2d5e6448a69fd43e88590d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapHeight: 10
-  mapWidth: 10
-  scale: 0.4
+  drawMode: 1
+  mapHeight: 100
+  mapWidth: 100
+  autoUpdate: 1
+  seed: 959374
+  scale: 25
+  octaves: 5
+  persistance: 0.5
+  lacunarity: 2
+  offset: {x: -15.02, y: 0}
+  terrains:
+  - name: Water Deep
+    height: 0.3
+    color: {r: 0.025854412, g: 0.067629024, b: 0.7830189, a: 1}
+  - name: Water Shallow
+    height: 0.4
+    color: {r: 0.026920741, g: 0, b: 0.8962264, a: 1}
+  - name: Sand
+    height: 0.45
+    color: {r: 0.8235295, g: 0.81568635, b: 0.48627454, a: 1}
+  - name: Grass Light
+    height: 0.55
+    color: {r: 0.33333334, g: 0.5882353, b: 0.08627451, a: 1}
+  - name: Grass Dark
+    height: 0.6
+    color: {r: 0.25490198, g: 0.41960788, b: 0.08235294, a: 1}
+  - name: 'Rock '
+    height: 0.7
+    color: {r: 0.36078432, g: 0.27058825, b: 0.24313726, a: 1}
+  - name: Rock Heavy
+    height: 0.9
+    color: {r: 0.29803923, g: 0.23529412, b: 0.21568628, a: 1}
+  - name: Snow
+    height: 1
+    color: {r: 1, g: 0.99215686, b: 0.99215686, a: 1}
 --- !u!4 &214530763
 Transform:
   m_ObjectHideFlags: 0
@@ -176,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 214530760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1634, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -430,7 +462,7 @@ Transform:
   m_GameObject: {fileID: 1478875616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
