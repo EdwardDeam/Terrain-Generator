@@ -41,7 +41,8 @@ public static class MeshGenerator
 /// <summary>
 /// Class that holds data for and an create a Mesh, Used with MeshGenerator.
 /// </summary>
-public class MeshData {
+public class MeshData
+{
     public Vector3[] vertices;
     public int[] triangles;
     public Vector2[] uvs;
