@@ -10,7 +10,7 @@ public struct TerrainType {
 
 public class MapGenerator : MonoBehaviour
 {
-    public enum DrawMode { NoiseMap, ColorMap };
+    public enum DrawMode { NoiseMap, ColorMap, Mesh };
     public DrawMode drawMode;
 
     [SerializeField]
@@ -64,6 +64,10 @@ public class MapGenerator : MonoBehaviour
         }
         else if (drawMode == DrawMode.ColorMap) {
             display.DrawTexture(TextureGenerator.TextureFromColorMap(colorMap, mapWidth, mapHeight));
+        }
+        else if (drawMode == DrawMode.Mesh)
+        {
+            display.DrawMesh(MeshGenerator.GenerateTerrainMeshData(noiseMap), TextureGenerator.TextureFromColorMap(colorMap, mapWidth, mapHeight));
         }
     }
 
