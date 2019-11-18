@@ -7,7 +7,7 @@ public static class MeshGenerator
     /// </summary>
     /// <param name="heightMap"> noise map used for the terrain Y axis</param>
     /// <returns>MeshData</returns>
-    public static MeshData GenerateTerrainMeshData(float[,] heightMap)
+    public static MeshData GenerateTerrainMeshData(float[,] heightMap, float heightMultiplier, AnimationCurve heightCurve)
     {
         int width = heightMap.GetLength(0);
         int height = heightMap.GetLength(1);
@@ -23,7 +23,7 @@ public static class MeshGenerator
         {
             for (int x = 0; x < width; x++)
             {
-                meshData.vertices[vertexIndex] = new Vector3(topLeftX + x, heightMap[x, y], topLeftZ - y);
+                meshData.vertices[vertexIndex] = new Vector3(topLeftX + x, heightCurve.Evaluate(heightMap[x, y]) * heightMultiplier, topLeftZ - y);
                 meshData.uvs[vertexIndex] = new Vector2(x / (float)width, y / (float)height);
                 // Ignore the Right and left vertices of the map
                 if(x < width-1 && y < height - 1)
