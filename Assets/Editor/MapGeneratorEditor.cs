@@ -11,8 +11,10 @@ public class MapGeneratorEditor : Editor
         // Get reference to the map generator, target is the item that this is inspecting.
         MapGenerator mapGen = (MapGenerator)target;
 
-        if (DrawDefaultInspector()) {
-            if (mapGen.autoUpdate) {
+        if (DrawDefaultInspector())
+        {
+            if (mapGen.autoUpdate)
+            {
                 mapGen.GenerateMap();
             }
         }
